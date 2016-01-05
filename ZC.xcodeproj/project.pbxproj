@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED8DC0091C36152A00B42D26 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC0081C36152A00B42D26 /* main.c */; };
+		ED8DC03B1C36158000B42D26 /* CString.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC0101C36158000B42D26 /* CString.c */; };
+		ED8DC03F1C36158000B42D26 /* Groups.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC0191C36158000B42D26 /* Groups.m */; };
+		ED8DC0401C36158000B42D26 /* hashmap.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC01A1C36158000B42D26 /* hashmap.c */; };
+		ED8DC0431C36158000B42D26 /* mmap_test.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC01F1C36158000B42D26 /* mmap_test.c */; };
+		ED8DC0461C36158000B42D26 /* SimpleFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC0261C36158000B42D26 /* SimpleFileHandle.m */; };
+		ED8DC0471C36158000B42D26 /* SimpleHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC0281C36158000B42D26 /* SimpleHttpRequest.m */; };
+		ED8DC0491C36158000B42D26 /* ZArray.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC02B1C36158000B42D26 /* ZArray.c */; };
+		ED8DC04A1C36158000B42D26 /* ZDict.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC02D1C36158000B42D26 /* ZDict.c */; };
+		ED8DC04B1C36158000B42D26 /* ZHash.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC02F1C36158000B42D26 /* ZHash.c */; };
+		ED8DC04C1C36158000B42D26 /* ZHttpServer.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC0311C36158000B42D26 /* ZHttpServer.c */; };
+		ED8DC04D1C36158000B42D26 /* ZJson.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC0331C36158000B42D26 /* ZJson.c */; };
+		ED8DC04E1C36158000B42D26 /* ZMap.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC0351C36158000B42D26 /* ZMap.c */; };
+		ED8DC04F1C36158000B42D26 /* ZThread.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC0371C36158000B42D26 /* ZThread.c */; };
+		ED8DC0501C36158000B42D26 /* ZTime.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC0391C36158000B42D26 /* ZTime.c */; };
+		EDE5F2161C393A7000792F7D /* backup.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE5F2141C393A7000792F7D /* backup.c */; };
+		EDE86D471C37A52100014918 /* ZStack.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE86D451C37A52100014918 /* ZStack.c */; };
+		EDE86D4A1C37F3CB00014918 /* ZC.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE86D481C37F3CB00014918 /* ZC.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED8DC0031C36152A00B42D26 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ED8DC0051C36152A00B42D26 /* ZC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZC; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED8DC0081C36152A00B42D26 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		ED8DC0101C36158000B42D26 /* CString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = CString.c; path = ../../demo/oc_demo/CString.c; sourceTree = "<group>"; };
+		ED8DC0111C36158000B42D26 /* CString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CString.h; path = ../../demo/oc_demo/CString.h; sourceTree = "<group>"; };
+		ED8DC0181C36158000B42D26 /* Groups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Groups.h; path = ../../demo/oc_demo/Groups.h; sourceTree = "<group>"; };
+		ED8DC0191C36158000B42D26 /* Groups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Groups.m; path = ../../demo/oc_demo/Groups.m; sourceTree = "<group>"; };
+		ED8DC01A1C36158000B42D26 /* hashmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hashmap.c; path = ../../demo/oc_demo/hashmap.c; sourceTree = "<group>"; };
+		ED8DC01B1C36158000B42D26 /* hashmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hashmap.h; path = ../../demo/oc_demo/hashmap.h; sourceTree = "<group>"; };
+		ED8DC01F1C36158000B42D26 /* mmap_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mmap_test.c; path = ../../demo/oc_demo/mmap_test.c; sourceTree = "<group>"; };
+		ED8DC0201C36158000B42D26 /* mmap_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mmap_test.h; path = ../../demo/oc_demo/mmap_test.h; sourceTree = "<group>"; };
+		ED8DC0251C36158000B42D26 /* SimpleFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleFileHandle.h; path = ../../demo/oc_demo/SimpleFileHandle.h; sourceTree = "<group>"; };
+		ED8DC0261C36158000B42D26 /* SimpleFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleFileHandle.m; path = ../../demo/oc_demo/SimpleFileHandle.m; sourceTree = "<group>"; };
+		ED8DC0271C36158000B42D26 /* SimpleHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleHttpRequest.h; path = ../../demo/oc_demo/SimpleHttpRequest.h; sourceTree = "<group>"; };
+		ED8DC0281C36158000B42D26 /* SimpleHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleHttpRequest.m; path = ../../demo/oc_demo/SimpleHttpRequest.m; sourceTree = "<group>"; };
+		ED8DC02B1C36158000B42D26 /* ZArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ZArray.c; path = ../../demo/oc_demo/ZArray.c; sourceTree = "<group>"; };
+		ED8DC02C1C36158000B42D26 /* ZArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZArray.h; path = ../../demo/oc_demo/ZArray.h; sourceTree = "<group>"; };
+		ED8DC02D1C36158000B42D26 /* ZDict.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ZDict.c; path = ../../demo/oc_demo/ZDict.c; sourceTree = "<group>"; };
+		ED8DC02E1C36158000B42D26 /* ZDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZDict.h; path = ../../demo/oc_demo/ZDict.h; sourceTree = "<group>"; };
+		ED8DC02F1C36158000B42D26 /* ZHash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ZHash.c; path = ../../demo/oc_demo/ZHash.c; sourceTree = "<group>"; };
+		ED8DC0301C36158000B42D26 /* ZHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHash.h; path = ../../demo/oc_demo/ZHash.h; sourceTree = "<group>"; };
+		ED8DC0311C36158000B42D26 /* ZHttpServer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ZHttpServer.c; path = ../../demo/oc_demo/ZHttpServer.c; sourceTree = "<group>"; };
+		ED8DC0321C36158000B42D26 /* ZHttpServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHttpServer.h; path = ../../demo/oc_demo/ZHttpServer.h; sourceTree = "<group>"; };
+		ED8DC0331C36158000B42D26 /* ZJson.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ZJson.c; path = ../../demo/oc_demo/ZJson.c; sourceTree = "<group>"; };
+		ED8DC0341C36158000B42D26 /* ZJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZJson.h; path = ../../demo/oc_demo/ZJson.h; sourceTree = "<group>"; };
+		ED8DC0351C36158000B42D26 /* ZMap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ZMap.c; path = ../../demo/oc_demo/ZMap.c; sourceTree = "<group>"; };
+		ED8DC0361C36158000B42D26 /* ZMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZMap.h; path = ../../demo/oc_demo/ZMap.h; sourceTree = "<group>"; };
+		ED8DC0371C36158000B42D26 /* ZThread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ZThread.c; path = ../../demo/oc_demo/ZThread.c; sourceTree = "<group>"; };
+		ED8DC0381C36158000B42D26 /* ZThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZThread.h; path = ../../demo/oc_demo/ZThread.h; sourceTree = "<group>"; };
+		ED8DC0391C36158000B42D26 /* ZTime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ZTime.c; path = ../../demo/oc_demo/ZTime.c; sourceTree = "<group>"; };
+		ED8DC03A1C36158000B42D26 /* ZTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZTime.h; path = ../../demo/oc_demo/ZTime.h; sourceTree = "<group>"; };
+		EDE5F2141C393A7000792F7D /* backup.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = backup.c; sourceTree = "<group>"; };
+		EDE5F2151C393A7000792F7D /* backup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backup.h; sourceTree = "<group>"; };
+		EDE86D451C37A52100014918 /* ZStack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZStack.c; sourceTree = "<group>"; };
+		EDE86D461C37A52100014918 /* ZStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZStack.h; sourceTree = "<group>"; };
+		EDE86D481C37F3CB00014918 /* ZC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZC.c; sourceTree = "<group>"; };
+		EDE86D491C37F3CB00014918 /* ZC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZC.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED8DC0021C36152A00B42D26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED8DBFFC1C36152A00B42D26 = {
+			isa = PBXGroup;
+			children = (
+				ED8DC0071C36152A00B42D26 /* ZC */,
+				ED8DC0061C36152A00B42D26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED8DC0061C36152A00B42D26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED8DC0051C36152A00B42D26 /* ZC */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED8DC0071C36152A00B42D26 /* ZC */ = {
+			isa = PBXGroup;
+			children = (
+				ED8DC00F1C36153A00B42D26 /* api */,
+				ED8DC0081C36152A00B42D26 /* main.c */,
+			);
+			path = ZC;
+			sourceTree = "<group>";
+		};
+		ED8DC00F1C36153A00B42D26 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				ED8DC0101C36158000B42D26 /* CString.c */,
+				ED8DC0111C36158000B42D26 /* CString.h */,
+				ED8DC0181C36158000B42D26 /* Groups.h */,
+				ED8DC0191C36158000B42D26 /* Groups.m */,
+				ED8DC01A1C36158000B42D26 /* hashmap.c */,
+				ED8DC01B1C36158000B42D26 /* hashmap.h */,
+				ED8DC01F1C36158000B42D26 /* mmap_test.c */,
+				ED8DC0201C36158000B42D26 /* mmap_test.h */,
+				ED8DC0251C36158000B42D26 /* SimpleFileHandle.h */,
+				ED8DC0261C36158000B42D26 /* SimpleFileHandle.m */,
+				ED8DC0271C36158000B42D26 /* SimpleHttpRequest.h */,
+				ED8DC0281C36158000B42D26 /* SimpleHttpRequest.m */,
+				ED8DC02B1C36158000B42D26 /* ZArray.c */,
+				ED8DC02C1C36158000B42D26 /* ZArray.h */,
+				ED8DC02D1C36158000B42D26 /* ZDict.c */,
+				ED8DC02E1C36158000B42D26 /* ZDict.h */,
+				ED8DC02F1C36158000B42D26 /* ZHash.c */,
+				ED8DC0301C36158000B42D26 /* ZHash.h */,
+				ED8DC0311C36158000B42D26 /* ZHttpServer.c */,
+				ED8DC0321C36158000B42D26 /* ZHttpServer.h */,
+				ED8DC0331C36158000B42D26 /* ZJson.c */,
+				ED8DC0341C36158000B42D26 /* ZJson.h */,
+				ED8DC0351C36158000B42D26 /* ZMap.c */,
+				ED8DC0361C36158000B42D26 /* ZMap.h */,
+				ED8DC0371C36158000B42D26 /* ZThread.c */,
+				ED8DC0381C36158000B42D26 /* ZThread.h */,
+				ED8DC0391C36158000B42D26 /* ZTime.c */,
+				ED8DC03A1C36158000B42D26 /* ZTime.h */,
+				EDE86D451C37A52100014918 /* ZStack.c */,
+				EDE86D461C37A52100014918 /* ZStack.h */,
+				EDE86D481C37F3CB00014918 /* ZC.c */,
+				EDE86D491C37F3CB00014918 /* ZC.h */,
+				EDE5F2141C393A7000792F7D /* backup.c */,
+				EDE5F2151C393A7000792F7D /* backup.h */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED8DC0041C36152A00B42D26 /* ZC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED8DC00C1C36152A00B42D26 /* Build configuration list for PBXNativeTarget "ZC" */;
+			buildPhases = (
+				ED8DC0011C36152A00B42D26 /* Sources */,
+				ED8DC0021C36152A00B42D26 /* Frameworks */,
+				ED8DC0031C36152A00B42D26 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZC;
+			productName = ZC;
+			productReference = ED8DC0051C36152A00B42D26 /* ZC */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED8DBFFD1C36152A00B42D26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "张新伟";
+				TargetAttributes = {
+					ED8DC0041C36152A00B42D26 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = ED8DC0001C36152A00B42D26 /* Build configuration list for PBXProject "ZC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED8DBFFC1C36152A00B42D26;
+			productRefGroup = ED8DC0061C36152A00B42D26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED8DC0041C36152A00B42D26 /* ZC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED8DC0011C36152A00B42D26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE86D4A1C37F3CB00014918 /* ZC.c in Sources */,
+				ED8DC0461C36158000B42D26 /* SimpleFileHandle.m in Sources */,
+				ED8DC0491C36158000B42D26 /* ZArray.c in Sources */,
+				ED8DC03B1C36158000B42D26 /* CString.c in Sources */,
+				ED8DC04E1C36158000B42D26 /* ZMap.c in Sources */,
+				ED8DC04D1C36158000B42D26 /* ZJson.c in Sources */,
+				ED8DC0091C36152A00B42D26 /* main.c in Sources */,
+				EDE5F2161C393A7000792F7D /* backup.c in Sources */,
+				ED8DC04C1C36158000B42D26 /* ZHttpServer.c in Sources */,
+				ED8DC03F1C36158000B42D26 /* Groups.m in Sources */,
+				ED8DC04B1C36158000B42D26 /* ZHash.c in Sources */,
+				EDE86D471C37A52100014918 /* ZStack.c in Sources */,
+				ED8DC04F1C36158000B42D26 /* ZThread.c in Sources */,
+				ED8DC0431C36158000B42D26 /* mmap_test.c in Sources */,
+				ED8DC0501C36158000B42D26 /* ZTime.c in Sources */,
+				ED8DC04A1C36158000B42D26 /* ZDict.c in Sources */,
+				ED8DC0471C36158000B42D26 /* SimpleHttpRequest.m in Sources */,
+				ED8DC0401C36158000B42D26 /* hashmap.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ED8DC00A1C36152A00B42D26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ED8DC00B1C36152A00B42D26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ED8DC00D1C36152A00B42D26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED8DC00E1C36152A00B42D26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED8DC0001C36152A00B42D26 /* Build configuration list for PBXProject "ZC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED8DC00A1C36152A00B42D26 /* Debug */,
+				ED8DC00B1C36152A00B42D26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED8DC00C1C36152A00B42D26 /* Build configuration list for PBXNativeTarget "ZC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED8DC00D1C36152A00B42D26 /* Debug */,
+				ED8DC00E1C36152A00B42D26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED8DBFFD1C36152A00B42D26 /* Project object */;
+}
