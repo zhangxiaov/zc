@@ -61,16 +61,17 @@ void* zstackPop(ZStack* self) {
 }
 
 int zstackPreValueType(ZStack* self) {
-    
-    return 0;
+    ZStruct* data = zstackPeek(self);
+    int type = data->type;
+    return type;
 }
 
-int zstackEmpty(ZStack* self) {
+bool zstackEmpty(ZStack* self) {
     if (self->top == -1) {
-        return 1;
+        return true;
     }
     
-    return -1;
+    return false;
 }
 
 void* zstackPeek(ZStack* self) {

@@ -10,20 +10,36 @@
 #define ZC_h
 
 #include <stdio.h>
+#include <errno.h>
+
+#define zptr unsigned long*
+
+typedef struct _ZStruct ZStruct;
+
+struct _ZStruct {
+    int type;
+    int typeSize;
+    zptr data;
+};
 
 #define bool int
 #define true 1
-#define false -1
+#define false 0
 
-#define typeByte 0
-#define typeInt 1
-#define typeLong 2
-#define typeFloat 3
-#define typeDouble 4
+#define typeZStruct 0xffff
+#define typeByte    0xfffe
+#define typeInt     0xfffd
+#define typeLong    0xfffc
+#define typeFloat   0xfffb
+#define typeDouble  0xfffa
+
+#define typeZMap    0xffef
+#define typeZJson   0xffdf
+#define typeZArray  0xffcf
+#define typeZStack  0xffbf
 
 #define typePtr 5
 
-#define zptr unsigned long*
 
 int isWhiteSpace(char ch);
 

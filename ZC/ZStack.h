@@ -11,7 +11,10 @@
 
 #include <stdio.h>
 #include "ZC.h"
+#include "ZMap.h"
 #define maxsize 10
+
+
 
 
 typedef struct _ZStack ZStack;
@@ -29,6 +32,6 @@ char zstackPopByte(ZStack* self);
 void zstackPush(ZStack* self, void* valPtr);
 void* zstackPop(ZStack* self);
 void* zstackPeek(ZStack* self);
-int zstackEmpty(ZStack* self);
+bool zstackEmpty(ZStack* self);
 int zstackPreValueType(ZStack* self);
 #endif /* ZStack_h */

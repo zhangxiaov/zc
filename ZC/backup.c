@@ -529,3 +529,25 @@
 //
 //
 //
+
+
+//    main string str, list l, map m - string str
+//    print "xxx"
+//    l = [1, 3, 4, 5];
+//    for i1, i2 in l print %d,%d,i1,i2
+//
+//    m = {"k1":"v1", "k2":"v2"};
+//    l2 = m.keys
+//    for k in l2 print m[k]
+//
+//    ret
+
+
+
+
+
+
+
+
+
+
