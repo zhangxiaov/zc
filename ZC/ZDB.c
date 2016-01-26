@@ -12,29 +12,25 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include "ZMap.h"
-#include "ZJson.h"
 #include <string.h>
 #include <sys/malloc.h>
 #include "ZTime.h"
+#include <assert.h>
 
 static int globalPos = 0;
 
-typedef struct _zrecord zrecord;
-typedef struct _zdb zdb;
 
-struct _zdb {
-    zptr mmap;
-};
-
-struct _zrecord {
-    char jsonStr[1024*2];
-};
-
-zptr zfileToMmap(char* fileName) {
+void* zfileToMmap(char* fileName) {
     int fd = open(fileName, O_RDWR);
+    assert(fd > 0);
     struct stat st;
     fstat(fd, &st);
-    zptr addr = mmap(0, st.st_size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, 0);
+    void* addr = mmap(0, st.st_size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, 0);
+    
+    printf("%llu\n", addr);
+    printf("%llu\n", addr+1);
+
+    printf("%llu\n", addr+st.st_size);
     return addr;
 }
 
@@ -53,9 +49,6 @@ int zdbAdd(zdb* self, char* val) {
     }
     
     memcpy(self->mmap+globalPos, val, strlen(val));
-    
-    zptr l = self->mmap + globalPos;
-    int i = l - self->mmap;
     globalPos += recordSize;
     return globalPos-recordSize;
 }
@@ -85,9 +78,15 @@ char* zdbReadToString(zdb* self, int pos) {
 }
 
 zdb* zdbInit(char* fileName) {
-    zdb* db = (zdb*)malloc(sizeof(zdb));
-    zptr p = zfileToMmap(fileName);
-    db->mmap = p;
+    static zdb* db = NULL;
+    if (db == NULL) {
+        db = (zdb*)malloc(sizeof(zdb));
+        void* p = zfileToMmap(fileName);
+        if (p == NULL) {
+            return NULL;
+        }
+        db->mmap = p;
+    }
     
     return db;
 }
@@ -113,36 +112,32 @@ bool zdbCreate(char* fileName, int size) {
     return true;
 }
 
-//void main_zdb {
+void main_zdb() {
 
-void main() {
+//void main() {
+
+    
+    int len = sizeof(zrecord);
+    
     char* dbName = "/tmp/test";
     int dbSize = 1000000;
-//    if (!zdbCreate(dbName, 1000000)) {
-//        return;
-//    }
+    if (!zdbCreate(dbName, 100000000)) {
+        return;
+    }
     
     zdb* db = zdbInit(dbName);
+    
     ZMap* map = zmapInit();
     zmapPut(map, "userName", "张新伟");
     zmapPut(map, "password", "123456");
     
-    long s = ztimeSince1970();
-    for (int i = 0; i < 30; i++) {
+    time_t s = ztimeSince1970();
+    for (int i = 0; i < 10000; i++) {
         int pos = zdbAdd(db, zmapToString(map));
-        
-        zmapPut(map, "age", "26");
-        zdbUpdate(db, pos, zmapToString(map));
-        
-        //2
-        int pos2 = zdbAdd(db, zmapToString(map));
-        
-        zmapPut(map, "age", "26");
-        zdbUpdate(db, pos2, zmapToString(map));
-
+        zdbReadToString(db, pos);
     }
     
-    printf("time = %d\n", ztimeSince1970() - s);
+    printf("time = %.0f\n", difftime(ztimeSince1970(), s));
     
     int pos = zdbAdd(db, zmapToString(map));
     printf("pos = %d,\n content = %s\n", pos, zdbReadToString(db, pos));

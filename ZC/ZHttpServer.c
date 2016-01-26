@@ -128,8 +128,8 @@ void* zhttpServerGetFunc(ZHttpServer* self, char* path) {
 
 void zhttpServerHandle(ZHttpServer* self, int clientFd) {
     
-    ZDict* headerDict = zdictInitWithClientFd(clientFd);
-    ZDict* dictPath = self->dictPath;
+//    ZDict* headerDict = zdictInitWithClientFd(clientFd);
+//    ZDict* dictPath = self->dictPath;
     
     char* path = self->path;
     

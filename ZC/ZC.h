@@ -10,7 +10,15 @@
 #define ZC_h
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
 #include <errno.h>
+#include <signal.h>
+#include <assert.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 #define zptr unsigned long*
 

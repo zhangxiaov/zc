@@ -1,20 +1,10 @@
 #define _GNU_SOURCE /* accept4, etc. */
 
-#include "faio.h"
+#include "ZC.h"
 
-#include <errno.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <assert.h>
-
-#include <sys/stat.h>
-#include <sys/types.h>
 #include <sys/socket.h>
-#include <signal.h>
-#include <unistd.h>
-
 #include <netinet/in.h>
+#include "faio.h"
 
 #define ARRAY_SIZE(a)                                                         \
   (sizeof(a) / sizeof((a)[0]))
@@ -270,6 +260,8 @@ static int client_write(struct faio_loop *loop, struct client *c)
     assert(c->wr.buf != NULL);
     assert(c->wr.len != 0);
 
+      fprintf(stdout, "write\n");
+      
     do
       n = write(c->fh.fd, c->wr.buf, c->wr.len);
     while (n == 0 && errno == EINTR);
@@ -307,9 +299,13 @@ static void client_cb(struct faio_loop *loop,
     if (client_read(loop, c))
       goto err;
 
-  if (revents & FAIO_POLLOUT)
-    if (client_write(loop, c))
-      goto err;
+    if (revents & FAIO_POLLOUT) {
+
+        
+        //
+        if (client_write(loop, c))
+            goto err;
+    }
 
   return;
 
@@ -341,7 +337,7 @@ static void accept_cb(struct faio_loop *loop,
   assert(errno == EAGAIN);
 }
 
-int main_bench(void)
+int mainccc(void)
 {
   struct faio_handle server_handle;
   struct faio_loop main_loop;

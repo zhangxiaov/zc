@@ -118,7 +118,15 @@ static void faio_poll(struct faio_loop *loop, double timeout)
 
   while (!faio__queue_empty(&loop->pending_queue)) {
     queue = faio__queue_head(&loop->pending_queue);
-    handle = faio__queue_data(queue, struct faio_handle, pending_queue);
+      
+      //#define faio__queue_data(ptr, type, member)                                   \
+      //  ((type *) ((char *) (ptr) - (uintptr_t) &((type *) 0)->member))
+
+//    handle = faio__queue_data(queue, struct faio_handle, pending_queue);
+      handle =   ((struct faio_handle *) ((char *) (queue) - (uintptr_t) &((struct faio_handle *) 0)->pending_queue));
+      
+      printf("%d fd\n", handle->fd);
+      
     faio__queue_remove(queue);
 
     if ((handle->events & POLLIN) != (handle->revents & POLLIN)) {
@@ -150,6 +158,7 @@ static void faio_poll(struct faio_loop *loop, double timeout)
     }
   }
 
+    printf("test end\n");
   if (n != 0)
     kevent(loop->kq, events, n, NULL, 0, NULL);
 

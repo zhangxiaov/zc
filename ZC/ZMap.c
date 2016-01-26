@@ -243,6 +243,7 @@ char* zmapToString(ZMap* self) {
     }
     
     str = csReplaceCharAtLast(str, '}');
+    str = csAppend(str, "\0");
     return str;
 }
 
