@@ -116,6 +116,8 @@ static void faio_poll(struct faio_loop *loop, double timeout)
 
   n = 0;
 
+    
+    // 121 - 153 ????????
   while (!faio__queue_empty(&loop->pending_queue)) {
     queue = faio__queue_head(&loop->pending_queue);
     handle = faio__queue_data(queue, struct faio_handle, pending_queue);
@@ -130,7 +132,7 @@ static void faio_poll(struct faio_loop *loop, double timeout)
       EV_SET(events + n, handle->fd, EVFILT_READ, op, 0, 0, handle);
 
       if (maxevents == (unsigned int) ++n) {
-        kevent(loop->kq, events, n, NULL, 0, NULL);
+        kevent(loop->kq, events, n, NULL, 0, NULL); //注册事件
         n = 0;
       }
     }
@@ -144,14 +146,14 @@ static void faio_poll(struct faio_loop *loop, double timeout)
       EV_SET(events + n, handle->fd, EVFILT_WRITE, op, 0, 0, handle);
 
       if (maxevents == (unsigned int) ++n) {
-        kevent(loop->kq, events, n, NULL, 0, NULL);
+        kevent(loop->kq, events, n, NULL, 0, NULL); //注册事件
         n = 0;
       }
     }
   }
 
   if (n != 0)
-    kevent(loop->kq, events, n, NULL, 0, NULL);
+    kevent(loop->kq, events, n, NULL, 0, NULL);//注册事件
 
   if (timeout < 0)
     pts = NULL;
@@ -171,7 +173,7 @@ static void faio_poll(struct faio_loop *loop, double timeout)
       abort();
 
   for (;;) {
-    n = kevent(loop->kq, NULL, 0, events, maxevents, pts);
+    n = kevent(loop->kq, NULL, 0, events, maxevents, pts); //wait
 
     if (n == 0)
       return;
@@ -183,6 +185,11 @@ static void faio_poll(struct faio_loop *loop, double timeout)
         abort();
     }
 
+      //test
+      char* s = "fsafasfsa \
+      fdffasdfasd \
+      fdfdfasf";
+      
     for (i = 0; i < n; i++) {
       handle = (struct faio_handle *) events[i].udata;
       revents = 0;

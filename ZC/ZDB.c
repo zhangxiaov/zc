@@ -113,14 +113,14 @@ bool zdbCreate(char* fileName, int size) {
     return true;
 }
 
-//void main_zdb {
+void main_zdb() {
 
-void main() {
+//void main() {
     char* dbName = "/tmp/test";
-    int dbSize = 1000000;
-//    if (!zdbCreate(dbName, 1000000)) {
-//        return;
-//    }
+    int dbSize = 100000000;
+    if (!zdbCreate(dbName, 100000000)) {
+        return;
+    }
     
     zdb* db = zdbInit(dbName);
     ZMap* map = zmapInit();
