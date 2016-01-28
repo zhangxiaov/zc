@@ -10,7 +10,15 @@
 #define ZC_h
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
 #include <errno.h>
+#include <signal.h>
+#include <assert.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 #define zptr unsigned long*
 
@@ -32,11 +40,12 @@ struct _ZStruct {
 #define typeLong    0xfffc
 #define typeFloat   0xfffb
 #define typeDouble  0xfffa
+#define typeString  0xffef
 
-#define typeZMap    0xffef
-#define typeZJson   0xffdf
-#define typeZArray  0xffcf
-#define typeZStack  0xffbf
+#define typeZMap    0xffee
+#define typeZJson   0xffed
+#define typeZArray  0xffec
+#define typeZStack  0xffeb
 
 #define typePtr 5
 

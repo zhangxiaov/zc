@@ -33,11 +33,20 @@ _61,_62,_63,N,...) N
 #include "ZMap.h"
 
 typedef struct _ZArray ZArray;
-
+// data 仅存 指针类型
+struct _ZArray {
+    int type;
+    int typeSize;
+    zptr data;
+    int len;
+    int pos;
+    bool isDynamic;
+};
 ZArray* zarrayInit(bool isDynamic);
 ZArray* zarrayInitWithVal(int n, void* val1,...);
 void zarrayAdd(ZArray* self, void* val);
 void* zarrayGet(ZArray* self, int index);
 char* zarrayToString(ZArray* self);
+ZArray* zarrayFileNames(char* dirName);
 
 #endif /* defined(__oc_demo__ZArray__) */

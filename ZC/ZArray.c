@@ -13,16 +13,8 @@
 #include <stdarg.h>
 #include "ZC.h"
 #include <string.h>
+#include <dirent.h>
 
-// data 仅存 指针类型
-struct _ZArray {
-    int type;
-    int typeSize;
-    zptr data;
-    int len;
-    int pos;
-    bool isDynamic;
-};
 
 ZArray* zarrayInit(bool isDynamic) {
     ZArray* array = (ZArray*)malloc(sizeof(ZArray));
@@ -118,6 +110,22 @@ char* zarrayToString(ZArray* self) {
     }else
         str = csReplaceCharAtLast(str, ']');
     return str;
+}
+
+//获取目录下文件名 数组
+ZArray* zarrayFileNames(char* path) {
+    ZArray* array = zarrayInit(true);
+    struct dirent* ptr;
+    DIR* dir = opendir(path);
+    while ((ptr = readdir(dir)) != NULL) {
+        if (ptr->d_name[0] == '.') {
+            continue;
+        }
+        zarrayAdd(array, ptr->d_name);
+    }
+    closedir(dir);
+    
+    return array;
 }
 
 void main_array(){

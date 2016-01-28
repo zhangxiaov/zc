@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED835B001C59BD0400F0BCFD /* test_sendMail.c in Sources */ = {isa = PBXBuildFile; fileRef = ED835AFE1C59BD0400F0BCFD /* test_sendMail.c */; };
+		ED835B021C59C73400F0BCFD /* test2.c in Sources */ = {isa = PBXBuildFile; fileRef = ED835B011C59C73400F0BCFD /* test2.c */; };
+		ED835B051C59EEB400F0BCFD /* ZIndex.c in Sources */ = {isa = PBXBuildFile; fileRef = ED835B031C59EEB400F0BCFD /* ZIndex.c */; };
+		ED835B081C5A0D2D00F0BCFD /* ZFile.c in Sources */ = {isa = PBXBuildFile; fileRef = ED835B061C5A0D2D00F0BCFD /* ZFile.c */; };
 		ED8DC0091C36152A00B42D26 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ED8DC0081C36152A00B42D26 /* main.c */; };
 		EDDD7C341C3E98FF000BB8AE /* select_demo.c in Sources */ = {isa = PBXBuildFile; fileRef = EDDD7C321C3E98FF000BB8AE /* select_demo.c */; };
-		EDDD7C3B1C3EB57F000BB8AE /* bench.c in Sources */ = {isa = PBXBuildFile; fileRef = EDDD7C351C3EB57F000BB8AE /* bench.c */; };
+		EDE086961C5340E900AD3966 /* ztcpServerStart.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE086941C5340E900AD3966 /* ztcpServerStart.c */; };
+		EDE086991C53419300AD3966 /* ztcpServerUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE086971C53419300AD3966 /* ztcpServerUtils.c */; };
+		EDE0B5D91C5365E900AD3966 /* zepoll_apple.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE0B5D81C5365E900AD3966 /* zepoll_apple.c */; };
 		EDE31F401C451BB1005D1AAF /* ZDB.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE31F3E1C451BB1005D1AAF /* ZDB.c */; };
 		EDE48BA91C3C10E40091C1E8 /* backup.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE48BA31C3C10E40091C1E8 /* backup.c */; };
 		EDE48BAA1C3C10E40091C1E8 /* ZC.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE48BA51C3C10E40091C1E8 /* ZC.c */; };
@@ -21,7 +27,6 @@
 		EDE48BD21C3C10F70091C1E8 /* SimpleFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE48BB91C3C10F70091C1E8 /* SimpleFileHandle.m */; };
 		EDE48BD31C3C10F70091C1E8 /* SimpleHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE48BBB1C3C10F70091C1E8 /* SimpleHttpRequest.m */; };
 		EDE48BD41C3C10F70091C1E8 /* ZArray.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE48BBC1C3C10F70091C1E8 /* ZArray.c */; };
-		EDE48BD51C3C10F70091C1E8 /* ZDict.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE48BBE1C3C10F70091C1E8 /* ZDict.c */; };
 		EDE48BD61C3C10F70091C1E8 /* ZHash.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE48BC01C3C10F70091C1E8 /* ZHash.c */; };
 		EDE48BD71C3C10F70091C1E8 /* ZHttpServer.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE48BC21C3C10F70091C1E8 /* ZHttpServer.c */; };
 		EDE48BD81C3C10F70091C1E8 /* ZJson.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE48BC41C3C10F70091C1E8 /* ZJson.c */; };
@@ -43,16 +48,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED835AFE1C59BD0400F0BCFD /* test_sendMail.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_sendMail.c; sourceTree = "<group>"; };
+		ED835AFF1C59BD0400F0BCFD /* test_sendMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_sendMail.h; sourceTree = "<group>"; };
+		ED835B011C59C73400F0BCFD /* test2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test2.c; sourceTree = "<group>"; };
+		ED835B031C59EEB400F0BCFD /* ZIndex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZIndex.c; sourceTree = "<group>"; };
+		ED835B041C59EEB400F0BCFD /* ZIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIndex.h; sourceTree = "<group>"; };
+		ED835B061C5A0D2D00F0BCFD /* ZFile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZFile.c; sourceTree = "<group>"; };
+		ED835B071C5A0D2D00F0BCFD /* ZFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFile.h; sourceTree = "<group>"; };
 		ED8DC0051C36152A00B42D26 /* ZC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZC; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8DC0081C36152A00B42D26 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EDDD7C321C3E98FF000BB8AE /* select_demo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = select_demo.c; sourceTree = "<group>"; };
 		EDDD7C331C3E98FF000BB8AE /* select_demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = select_demo.h; sourceTree = "<group>"; };
-		EDDD7C351C3EB57F000BB8AE /* bench.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bench.c; sourceTree = "<group>"; };
-		EDDD7C361C3EB57F000BB8AE /* faio-epoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "faio-epoll.h"; sourceTree = "<group>"; };
-		EDDD7C371C3EB57F000BB8AE /* faio-kqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "faio-kqueue.h"; sourceTree = "<group>"; };
-		EDDD7C381C3EB57F000BB8AE /* faio-port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "faio-port.h"; sourceTree = "<group>"; };
-		EDDD7C391C3EB57F000BB8AE /* faio-util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "faio-util.h"; sourceTree = "<group>"; };
-		EDDD7C3A1C3EB57F000BB8AE /* faio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faio.h; sourceTree = "<group>"; };
+		EDE086941C5340E900AD3966 /* ztcpServerStart.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ztcpServerStart.c; sourceTree = "<group>"; };
+		EDE086971C53419300AD3966 /* ztcpServerUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ztcpServerUtils.c; sourceTree = "<group>"; };
+		EDE0869C1C53651900AD3966 /* zepoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zepoll.h; sourceTree = "<group>"; };
+		EDE0B5D81C5365E900AD3966 /* zepoll_apple.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zepoll_apple.c; sourceTree = "<group>"; };
 		EDE31F3E1C451BB1005D1AAF /* ZDB.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZDB.c; sourceTree = "<group>"; };
 		EDE31F3F1C451BB1005D1AAF /* ZDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDB.h; sourceTree = "<group>"; };
 		EDE48BA31C3C10E40091C1E8 /* backup.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = backup.c; sourceTree = "<group>"; };
@@ -75,8 +85,6 @@
 		EDE48BBB1C3C10F70091C1E8 /* SimpleHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleHttpRequest.m; sourceTree = "<group>"; };
 		EDE48BBC1C3C10F70091C1E8 /* ZArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZArray.c; sourceTree = "<group>"; };
 		EDE48BBD1C3C10F70091C1E8 /* ZArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZArray.h; sourceTree = "<group>"; };
-		EDE48BBE1C3C10F70091C1E8 /* ZDict.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZDict.c; sourceTree = "<group>"; };
-		EDE48BBF1C3C10F70091C1E8 /* ZDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDict.h; sourceTree = "<group>"; };
 		EDE48BC01C3C10F70091C1E8 /* ZHash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZHash.c; sourceTree = "<group>"; };
 		EDE48BC11C3C10F70091C1E8 /* ZHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHash.h; sourceTree = "<group>"; };
 		EDE48BC21C3C10F70091C1E8 /* ZHttpServer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZHttpServer.c; sourceTree = "<group>"; };
@@ -102,6 +110,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED835AFD1C59BBAF00F0BCFD /* mail */ = {
+			isa = PBXGroup;
+			children = (
+				ED835AFE1C59BD0400F0BCFD /* test_sendMail.c */,
+				ED835AFF1C59BD0400F0BCFD /* test_sendMail.h */,
+				ED835B011C59C73400F0BCFD /* test2.c */,
+			);
+			name = mail;
+			sourceTree = "<group>";
+		};
 		ED8DBFFC1C36152A00B42D26 = {
 			isa = PBXGroup;
 			children = (
@@ -127,31 +145,72 @@
 			path = ZC;
 			sourceTree = "<group>";
 		};
+		EDE086881C531C7000AD3966 /* tcp */ = {
+			isa = PBXGroup;
+			children = (
+				EDE0B5D81C5365E900AD3966 /* zepoll_apple.c */,
+				EDE0869C1C53651900AD3966 /* zepoll.h */,
+				EDE086941C5340E900AD3966 /* ztcpServerStart.c */,
+				EDE086971C53419300AD3966 /* ztcpServerUtils.c */,
+			);
+			name = tcp;
+			sourceTree = "<group>";
+		};
+		EDE0B5DA1C5366D500AD3966 /* http */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = http;
+			sourceTree = "<group>";
+		};
+		EDE0B5DB1C5366DC00AD3966 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				EDE31F3E1C451BB1005D1AAF /* ZDB.c */,
+				EDE31F3F1C451BB1005D1AAF /* ZDB.h */,
+				ED835B031C59EEB400F0BCFD /* ZIndex.c */,
+				ED835B041C59EEB400F0BCFD /* ZIndex.h */,
+			);
+			name = db;
+			sourceTree = "<group>";
+		};
+		EDE0B5DE1C53711100AD3966 /* faio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = faio;
+			sourceTree = "<group>";
+		};
 		EDE48BA21C3C10D10091C1E8 /* api */ = {
 			isa = PBXGroup;
 			children = (
-				EDDD7C351C3EB57F000BB8AE /* bench.c */,
-				EDDD7C361C3EB57F000BB8AE /* faio-epoll.h */,
-				EDDD7C371C3EB57F000BB8AE /* faio-kqueue.h */,
-				EDDD7C381C3EB57F000BB8AE /* faio-port.h */,
-				EDDD7C391C3EB57F000BB8AE /* faio-util.h */,
-				EDDD7C3A1C3EB57F000BB8AE /* faio.h */,
+				EDE48BA31C3C10E40091C1E8 /* backup.c */,
+				EDE48BA41C3C10E40091C1E8 /* backup.h */,
 				EDE48BB01C3C10F70091C1E8 /* CString.c */,
 				EDE48BB11C3C10F70091C1E8 /* CString.h */,
+				EDE0B5DB1C5366DC00AD3966 /* db */,
+				EDE0B5DE1C53711100AD3966 /* faio */,
 				EDE48BB21C3C10F70091C1E8 /* Groups.h */,
 				EDE48BB31C3C10F70091C1E8 /* Groups.m */,
 				EDE48BB41C3C10F70091C1E8 /* hashmap.c */,
 				EDE48BB51C3C10F70091C1E8 /* hashmap.h */,
+				EDE0B5DA1C5366D500AD3966 /* http */,
+				ED835AFD1C59BBAF00F0BCFD /* mail */,
 				EDE48BB61C3C10F70091C1E8 /* mmap_test.c */,
 				EDE48BB71C3C10F70091C1E8 /* mmap_test.h */,
+				EDDD7C321C3E98FF000BB8AE /* select_demo.c */,
+				EDDD7C331C3E98FF000BB8AE /* select_demo.h */,
 				EDE48BB81C3C10F70091C1E8 /* SimpleFileHandle.h */,
 				EDE48BB91C3C10F70091C1E8 /* SimpleFileHandle.m */,
 				EDE48BBA1C3C10F70091C1E8 /* SimpleHttpRequest.h */,
 				EDE48BBB1C3C10F70091C1E8 /* SimpleHttpRequest.m */,
+				EDE086881C531C7000AD3966 /* tcp */,
 				EDE48BBC1C3C10F70091C1E8 /* ZArray.c */,
 				EDE48BBD1C3C10F70091C1E8 /* ZArray.h */,
-				EDE48BBE1C3C10F70091C1E8 /* ZDict.c */,
-				EDE48BBF1C3C10F70091C1E8 /* ZDict.h */,
+				EDE48BA51C3C10E40091C1E8 /* ZC.c */,
+				EDE48BA61C3C10E40091C1E8 /* ZC.h */,
+				ED835B061C5A0D2D00F0BCFD /* ZFile.c */,
+				ED835B071C5A0D2D00F0BCFD /* ZFile.h */,
 				EDE48BC01C3C10F70091C1E8 /* ZHash.c */,
 				EDE48BC11C3C10F70091C1E8 /* ZHash.h */,
 				EDE48BC21C3C10F70091C1E8 /* ZHttpServer.c */,
@@ -160,20 +219,12 @@
 				EDE48BC51C3C10F70091C1E8 /* ZJson.h */,
 				EDE48BC61C3C10F70091C1E8 /* ZMap.c */,
 				EDE48BC71C3C10F70091C1E8 /* ZMap.h */,
+				EDE48BA71C3C10E40091C1E8 /* ZStack.c */,
+				EDE48BA81C3C10E40091C1E8 /* ZStack.h */,
 				EDE48BC81C3C10F70091C1E8 /* ZThread.c */,
 				EDE48BC91C3C10F70091C1E8 /* ZThread.h */,
 				EDE48BCA1C3C10F70091C1E8 /* ZTime.c */,
 				EDE48BCB1C3C10F70091C1E8 /* ZTime.h */,
-				EDE48BA31C3C10E40091C1E8 /* backup.c */,
-				EDE48BA41C3C10E40091C1E8 /* backup.h */,
-				EDE48BA51C3C10E40091C1E8 /* ZC.c */,
-				EDE48BA61C3C10E40091C1E8 /* ZC.h */,
-				EDE48BA71C3C10E40091C1E8 /* ZStack.c */,
-				EDE48BA81C3C10E40091C1E8 /* ZStack.h */,
-				EDDD7C321C3E98FF000BB8AE /* select_demo.c */,
-				EDDD7C331C3E98FF000BB8AE /* select_demo.h */,
-				EDE31F3E1C451BB1005D1AAF /* ZDB.c */,
-				EDE31F3F1C451BB1005D1AAF /* ZDB.h */,
 			);
 			name = api;
 			sourceTree = "<group>";
@@ -235,21 +286,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE48BD41C3C10F70091C1E8 /* ZArray.c in Sources */,
+				EDE0B5D91C5365E900AD3966 /* zepoll_apple.c in Sources */,
 				EDE48BAA1C3C10E40091C1E8 /* ZC.c in Sources */,
 				EDE48BD81C3C10F70091C1E8 /* ZJson.c in Sources */,
 				EDE48BAB1C3C10E40091C1E8 /* ZStack.c in Sources */,
 				EDE48BDB1C3C10F70091C1E8 /* ZTime.c in Sources */,
+				ED835B081C5A0D2D00F0BCFD /* ZFile.c in Sources */,
+				EDE086991C53419300AD3966 /* ztcpServerUtils.c in Sources */,
 				EDE48BCF1C3C10F70091C1E8 /* Groups.m in Sources */,
 				EDE31F401C451BB1005D1AAF /* ZDB.c in Sources */,
 				EDE48BCE1C3C10F70091C1E8 /* CString.c in Sources */,
+				ED835B001C59BD0400F0BCFD /* test_sendMail.c in Sources */,
 				EDE48BD21C3C10F70091C1E8 /* SimpleFileHandle.m in Sources */,
+				ED835B051C59EEB400F0BCFD /* ZIndex.c in Sources */,
 				ED8DC0091C36152A00B42D26 /* main.c in Sources */,
 				EDE48BA91C3C10E40091C1E8 /* backup.c in Sources */,
 				EDE48BD91C3C10F70091C1E8 /* ZMap.c in Sources */,
 				EDE48BDA1C3C10F70091C1E8 /* ZThread.c in Sources */,
-				EDDD7C3B1C3EB57F000BB8AE /* bench.c in Sources */,
-				EDE48BD51C3C10F70091C1E8 /* ZDict.c in Sources */,
+				EDE086961C5340E900AD3966 /* ztcpServerStart.c in Sources */,
 				EDE48BD31C3C10F70091C1E8 /* SimpleHttpRequest.m in Sources */,
+				ED835B021C59C73400F0BCFD /* test2.c in Sources */,
 				EDE48BD61C3C10F70091C1E8 /* ZHash.c in Sources */,
 				EDE48BD11C3C10F70091C1E8 /* mmap_test.c in Sources */,
 				EDDD7C341C3E98FF000BB8AE /* select_demo.c in Sources */,

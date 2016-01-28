@@ -11,8 +11,32 @@
 
 #include <stdio.h>
 #include "ZC.h"
+#include "ZJson.h"
+#include "ZIndex.h"
+#include "ZMap.h"
+
+
+typedef struct _zrecord zrecord;
+typedef struct _zdb zdb;
+
+struct _zdb {
+    void* mmap;
+    ZArray* indexArray;
+};
+
+struct _zrecord {
+    char jsonStr[6*1024];
+};
+
 
 #define recordSize 6*1024;
 
 
+bool zdbCreate(char* fileName, int size);
+void zdbClose(zdb* self, int size);
+zdb* zdbInit(char* fileName);
+char* zdbReadToString(zdb* self, int pos);
+ZJson* zdbReadToJson(zdb* self, int pos);
+void zdbUpdate(zdb* self, int pos, char* val);
+int zdbAdd(zdb* self, char* val);
 #endif /* ZDB_h */

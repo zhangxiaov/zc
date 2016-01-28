@@ -274,6 +274,23 @@ int csToInt(char* self) {
     return 0;
 }
 
+//分隔
+char* csSeparateToEnd(char* self, char* c) {
+    int charIndex = csSearch(self, c);
+    if (charIndex == -1) {
+        return NULL;
+    }
+    return csSliceByBeginByteIndex(self, charIndex+1, 0);
+}
+
+char* csSeparateFromBegin(char* self, char* c) {
+    int charIndex = csSearch(self, c);
+    if (charIndex == -1) {
+        return NULL;
+    }
+    return csSliceByEndByteIndex(self, charIndex, 0);
+}
+
 void test () {
     int test = 12306;
 }

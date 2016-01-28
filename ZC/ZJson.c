@@ -42,16 +42,6 @@ void zjsonStrReadNull(zjsonStr* jsonStr);
 char* zjsonStrReadString(zjsonStr* self);
 
 typedef struct _zjsonNode zjsonNode;
-typedef struct _ZJson ZJson;
-
-struct _ZJson {
-    int type;
-    int typeSize;
-    int size;
-    int count;
-    void* data;
-    char* originString;
-};
 
 struct _zjsonNode {
     char* key;

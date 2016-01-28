@@ -23,4 +23,8 @@ bool csIsEqual(char* self, char* str);
 
 int csToInt(char* self);
 
+//分隔
+char* csSeparateToEnd(char* self, char* c);
+char* csSeparateFromBegin(char* self, char* c);
+
 #endif /* CString_h */

@@ -19,6 +19,15 @@
 #define ZS 4
 
 typedef struct _ZJson ZJson;
+
+struct _ZJson {
+    int type;
+    int typeSize;
+    int size;
+    int count;
+    void* data;
+    char* originString;
+};
 typedef struct _zi zi;
 typedef struct _zs zs;
 typedef struct _KV KV;
