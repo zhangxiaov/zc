@@ -112,6 +112,25 @@ char* zarrayToString(ZArray* self) {
     return str;
 }
 
+//获取目录下文件名以preifx始 数组
+ZArray* zarrayFileNameWithPrefix(char* path, char* prefix) {
+    ZArray* array = zarrayInit(true);
+    struct dirent* ptr;
+    DIR* dir = opendir(path);
+    while ((ptr = readdir(dir)) != NULL) {
+        if (ptr->d_name[0] == '.') {
+            continue;
+        }
+        char* fileName = ptr->d_name;
+        if (csIsPrefix(fileName, prefix)) {
+            zarrayAdd(array, fileName);
+        }
+    }
+    closedir(dir);
+    
+    return array;
+}
+
 //获取目录下文件名 数组
 ZArray* zarrayFileNames(char* path) {
     ZArray* array = zarrayInit(true);

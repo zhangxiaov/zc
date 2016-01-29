@@ -23,6 +23,9 @@ bool csIsEqual(char* self, char* str);
 
 int csToInt(char* self);
 
+//是前缀否
+bool csIsPrefix(char* self, char* prefix);
+    
 //分隔
 char* csSeparateToEnd(char* self, char* c);
 char* csSeparateFromBegin(char* self, char* c);

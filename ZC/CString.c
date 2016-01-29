@@ -274,6 +274,27 @@ int csToInt(char* self) {
     return 0;
 }
 
+//是前缀否
+bool csIsPrefix(char* self, char* prefix) {
+    if (self == NULL || prefix == NULL) {
+        return false;
+    }
+
+    size_t selfLen = strlen(self);
+    size_t prefixLen = strlen(prefix);
+    if (selfLen < prefixLen) {
+        return false;
+    }
+    
+    for (int i = 0; i < prefixLen; i++) {
+        if (*(self+i) != *(prefix+i)) {
+            return false;
+        }
+    }
+    
+    return true;
+}
+
 //分隔
 char* csSeparateToEnd(char* self, char* c) {
     int charIndex = csSearch(self, c);

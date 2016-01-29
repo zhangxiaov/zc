@@ -29,8 +29,6 @@ struct _zrecord {
 };
 
 
-#define recordSize 6*1024;
-
 
 bool zdbCreate(char* fileName, int size);
 void zdbClose(zdb* self, int size);

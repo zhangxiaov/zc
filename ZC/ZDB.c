@@ -16,9 +16,11 @@
 #include <sys/malloc.h>
 #include "ZTime.h"
 #include <assert.h>
+#include "CString.h"
 
 static int globalPos = 0;
 
+//db程式，无table，只record
 
 void* zfileToMmap(char* fileName) {
     int fd = open(fileName, O_RDWR);
@@ -32,13 +34,6 @@ void* zfileToMmap(char* fileName) {
 
     printf("%llu\n", addr+st.st_size);
     return addr;
-}
-
-void zfileCreateEmptySpecifySize(char* fileName, int size) {
-    int ret = truncate(fileName, size);
-    if (ret != 0) {
-        printf("failed when truncate\n");
-    }
 }
 
 unsigned long zdbAddByString(zdb* self, char* val) {
@@ -58,7 +53,9 @@ unsigned long zdbAddByString(zdb* self, char* val) {
     return globalPos-recordSize;
 }
 
-unsigned long zdbAddByJson(zdb* self, ZJson* json) {
+//插一跳新纪录
+unsigned long zdbInsertByJson(zdb* self, ZJson* json) {
+    unsigned long pos = 0;
     char* jsonStr = zjsonToString(json);
     size_t jsonStrLen = strlen(jsonStr);
     
@@ -70,16 +67,39 @@ unsigned long zdbAddByJson(zdb* self, ZJson* json) {
     
     memcpy(self->mmap+globalPos, jsonStr, jsonStrLen);
     globalPos += recordSize;
+    pos = globalPos-recordSize;
 
-    //处理索引
+    //处理索引，json中一层key 在indexarray 中，即行zindexadd
     ZMap* map = json->data;
-    int count = indexArray->len;
+    ZArray* indexArray = self->indexArray;
+    
+    int count = 0;
+    if (indexArray != NULL) {
+        count = indexArray->len;
+    }
     for (int i = 0; i < count; i++) {
-        char* indexName = zarrayGet(indexArray, i);
-        
+        ZIndex* index = zarrayGet(indexArray, i);
+        switch (index->valueType) {
+            case typeInt:{
+                char* val = zmapGet(map, index->name);
+                zindexAppend(index, csToInt(val), NULL, pos, typeInt);
+            }
+                break;
+            case typeString:{
+                char* val = zmapGet(map, index->name);
+                zindexAppend(index, 0, val, pos, typeString);
+            }
+                break;
+            default:
+                break;
+        }
     }
 
-    return globalPos-recordSize;
+    return pos;
+}
+
+void zdbUpdateByJson(zdb* self, ZJson* json) {
+    
 }
 
 void zdbUpdate(zdb* self, int pos, char* val) {
@@ -110,6 +130,8 @@ zdb* zdbInit(char* fileName) {
     static zdb* db = NULL;
     if (db == NULL) {
         db = (zdb*)malloc(sizeof(zdb));
+        db->indexArray = NULL;
+        
         void* p = zfileToMmap(fileName);
         if (p == NULL) {
             return NULL;

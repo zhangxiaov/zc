@@ -8,3 +8,9 @@
 
 #include "ZFile.h"
 
+void zfileCreateEmptySpecifySize(char* fileName, int size) {
+    int ret = truncate(fileName, size);
+    if (ret != 0) {
+        printf("failed when truncate\n");
+    }
+}

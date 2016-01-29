@@ -49,4 +49,7 @@ void* zarrayGet(ZArray* self, int index);
 char* zarrayToString(ZArray* self);
 ZArray* zarrayFileNames(char* dirName);
 
+//获取目录下文件名以preifx始 数组
+ZArray* zarrayFileNameWithPrefix(char* path, char* prefix);
+
 #endif /* defined(__oc_demo__ZArray__) */

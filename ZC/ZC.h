@@ -30,6 +30,9 @@ struct _ZStruct {
     zptr data;
 };
 
+//db 
+#define recordSize 6*1024;
+
 #define bool int
 #define true 1
 #define false 0
